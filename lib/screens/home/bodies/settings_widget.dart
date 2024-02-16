@@ -6,7 +6,7 @@ class SettingsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.orange,
+      // ToDo "Create SettingsWidget"
     );
   }
 }
