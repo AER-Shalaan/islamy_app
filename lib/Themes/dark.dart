@@ -7,10 +7,13 @@ class DarkTheme{
       appBarTheme: const AppBarTheme(
           backgroundColor: Colors.transparent,
           centerTitle: true,
-          titleTextStyle: TextStyle(color: Colors.black,fontSize: 30 ,fontWeight: FontWeight.bold)
+          titleTextStyle: TextStyle(color: Colors.white,fontSize: 30 ,fontWeight: FontWeight.bold),
+          shadowColor: Colors.transparent,
+        elevation: 0,
+        iconTheme: IconThemeData(color: Colors.white)
       ),
       cardTheme: CardTheme(
-        color: const Color(0xff141A2E).withOpacity(0.75),
+        color: const Color(0xff141A2E).withOpacity(0.50),
         margin: const EdgeInsets.all(20.0),
         elevation: 10,
       ),
@@ -18,7 +21,7 @@ class DarkTheme{
           seedColor: const Color(0xff141A2E),
           primary: const Color(0xff141A2E),
           onPrimary: Colors.white,
-          secondary: const Color(0xff141A2E).withOpacity(0.75),
+          secondary: Colors.black,
           onSecondary: const Color(0xffFACC1D),
           tertiary: const Color(0xffFACC1D)
       ),

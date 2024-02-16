@@ -7,7 +7,10 @@ class LightTheme{
   appBarTheme: const AppBarTheme(
   backgroundColor: Colors.transparent,
   centerTitle: true,
-  titleTextStyle: TextStyle(color: Colors.black,fontSize: 30 ,fontWeight: FontWeight.bold)
+  titleTextStyle: TextStyle(color: Colors.black,fontSize: 30 ,fontWeight: FontWeight.bold),
+      shadowColor: Colors.transparent,
+      elevation: 0,
+      iconTheme: IconThemeData(color: Colors.black)
   ),
   cardTheme: const CardTheme(
   color: Colors.white,
@@ -17,8 +20,8 @@ class LightTheme{
   colorScheme: ColorScheme.fromSeed(
   seedColor: const Color(0xffB7935F),
   primary: const Color(0xffB7935F),
-  onPrimary: Colors.white,
-  secondary: const Color(0xffB7935F).withOpacity(0.75),
+  onPrimary: Colors.black,
+  secondary: Colors.white,
   onSecondary: Colors.black,
   tertiary: const Color(0xffB7935F)
   ),

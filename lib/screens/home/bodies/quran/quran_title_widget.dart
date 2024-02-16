@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islamy_app/screens/widgets_details/quran_details_screen.dart';
+import 'package:islamy_app/screens/quran_details/quran_details_screen.dart';
 
 class QuranTitleWidget extends StatelessWidget {
   QuranTitleWidget({required this.title,required this.versesNumber,required this.index,super.key});
@@ -15,13 +15,13 @@ class QuranTitleWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Expanded(child: Center(child: Text(title,style: const TextStyle(fontSize: 25,fontWeight:FontWeight.bold ),))),
+          Expanded(child: Center(child: Text(title,style:  TextStyle(fontSize: 25,fontWeight:FontWeight.bold ,color: Theme.of(context).colorScheme.onPrimary),))),
           Container(
             color:Theme.of(context).colorScheme.tertiary,
             height: 50,
             width: 2,
           ),
-          Expanded(child: Center(child: Text(versesNumber,style: const TextStyle(fontSize: 25,fontWeight:FontWeight.bold ),))),
+          Expanded(child: Center(child: Text(versesNumber,style:  TextStyle(fontSize: 25,fontWeight:FontWeight.bold ,color: Theme.of(context).colorScheme.onPrimary),))),
         ],
       ),
     );
