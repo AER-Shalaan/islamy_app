@@ -25,50 +25,48 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
           appBar: AppBar(
             title: const Text("Islamy"),
           ),
-          body: Padding(
-            padding: const EdgeInsets.all(15.0),
+          body: SingleChildScrollView(
             child: Card(
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Column(
-
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text("سورة ${args.title}", style: TextStyle(color: Theme.of(context).colorScheme.onSecondary, fontSize: 25 , fontWeight: FontWeight.bold)),
-                              const SizedBox(width: 10,),
-                              Icon(Icons.play_circle,color: Theme.of(context).colorScheme.onSecondary ,size: 25,)
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    margin: const EdgeInsets.all(10),
+            
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("سورة ${args.title}", style: TextStyle(color: Theme.of(context).colorScheme.onSecondary, fontSize: 25 , fontWeight: FontWeight.bold)),
+                        const SizedBox(width: 10,),
+                        Icon(Icons.play_circle,color: Theme.of(context).colorScheme.onSecondary ,size: 25,)
+                      ],
+                    ),
+                  ),
+                  Divider(
+                    color: Theme.of(context).colorScheme.tertiary,
+                    height: 1,
+                    thickness: 2,
+                    indent: 30,
+                    endIndent: 30,
+                  ),
+            
+                  lines.isNotEmpty ?Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Text(sura, style: TextStyle(color: Theme.of(context).colorScheme.onSecondary,fontSize: 20)),
+                    ),
+                  ) : Container(
+                      width: double.infinity,
+                      height: 100,
+                      alignment: Alignment.center,
+                      child: CircularProgressIndicator(color: Theme.of(context).colorScheme.tertiary,)
+                  ),
                             ],
                           ),
-                          const SizedBox(height: 10,),
-                          Divider(color: Theme.of(context).colorScheme.tertiary,
-                            height: 1,
-                            thickness: 2,
-                          )
-                        ],
-                      ),
                     ),
-                    Expanded(child: lines.isNotEmpty
-                        ?ListView.custom(
-                          childrenDelegate:
-                          SliverChildBuilderDelegate((context , index){
-                            return Directionality(
-                              textDirection: TextDirection.rtl,
-                              child: Text(sura,style: TextStyle(color: Theme.of(context).colorScheme.onSecondary,fontSize: 20)),
-                            );
-                            },childCount: 1),)
-                        : Center(child: CircularProgressIndicator(color: Theme.of(context).colorScheme.tertiary)))
-              ],
-            ),
           ),
-        ),
-      ),
-    )
+        )
     );
   }
   List<String> lines =[];
