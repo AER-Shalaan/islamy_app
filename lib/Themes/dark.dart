@@ -13,7 +13,7 @@ class DarkTheme{
         iconTheme: IconThemeData(color: Colors.white)
       ),
       cardTheme: CardTheme(
-        color: const Color(0xff141A2E).withOpacity(0.75),
+        color: const Color(0xff141A2E).withOpacity(0.50),
         margin: const EdgeInsets.all(20.0),
         elevation: 10,
       ),
@@ -21,7 +21,7 @@ class DarkTheme{
           seedColor: const Color(0xff141A2E),
           primary: const Color(0xff141A2E),
           onPrimary: Colors.white,
-          secondary: const Color(0xff141A2E).withOpacity(0.75),
+          secondary: Colors.black,
           onSecondary: const Color(0xffFACC1D),
           tertiary: const Color(0xffFACC1D)
       ),

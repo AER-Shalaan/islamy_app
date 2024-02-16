@@ -21,7 +21,7 @@ class LightTheme{
   seedColor: const Color(0xffB7935F),
   primary: const Color(0xffB7935F),
   onPrimary: Colors.black,
-  secondary: const Color(0xffB7935F).withOpacity(0.75),
+  secondary: Colors.white,
   onSecondary: Colors.black,
   tertiary: const Color(0xffB7935F)
   ),
