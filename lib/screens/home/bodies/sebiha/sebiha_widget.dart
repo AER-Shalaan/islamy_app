@@ -25,7 +25,7 @@ class _SebihaWidgetState extends State<SebihaWidget> {
                   Padding(
                     padding: const EdgeInsets.only(left: 50),
                     child: ClipRRect(
-                        child: Image.asset("assets/icons/head_of_seb7a.png" )),
+                        child: Image.asset("assets/icons/head_of_seb7a.png" ,color: Theme.of(context).colorScheme.tertiary)),
                   ),
                   Container(
                       margin: const EdgeInsets.only(top: 80),
@@ -43,7 +43,7 @@ class _SebihaWidgetState extends State<SebihaWidget> {
                           child: AnimatedRotation(
                               turns: turns,
                               duration: const Duration(milliseconds: 10),
-                              child: Image.asset("assets/icons/body_of_seb7a.png" )
+                              child: Image.asset("assets/icons/body_of_seb7a.png",color: Theme.of(context).colorScheme.tertiary, )
                           )
                       )
                   ),
