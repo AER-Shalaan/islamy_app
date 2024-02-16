@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islamy_app/screens/home/bodies/hadith/hadith_widget.dart';
 import 'package:islamy_app/screens/home/bodies/quran/quran_widget.dart';
 import 'package:islamy_app/screens/home/bodies/radio_widget.dart';
-import 'package:islamy_app/screens/home/bodies/sebiha_widget.dart';
+import 'package:islamy_app/screens/home/bodies/sebiha/sebiha_widget.dart';
 import 'package:islamy_app/screens/home/bodies/settings_widget.dart';
 
 class HomeScreen extends StatefulWidget {
