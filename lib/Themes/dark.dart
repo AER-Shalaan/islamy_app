@@ -7,7 +7,10 @@ class DarkTheme{
       appBarTheme: const AppBarTheme(
           backgroundColor: Colors.transparent,
           centerTitle: true,
-          titleTextStyle: TextStyle(color: Colors.black,fontSize: 30 ,fontWeight: FontWeight.bold)
+          titleTextStyle: TextStyle(color: Colors.white,fontSize: 30 ,fontWeight: FontWeight.bold),
+          shadowColor: Colors.transparent,
+        elevation: 0,
+        iconTheme: IconThemeData(color: Colors.white)
       ),
       cardTheme: CardTheme(
         color: const Color(0xff141A2E).withOpacity(0.75),

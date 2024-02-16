@@ -28,11 +28,11 @@ class QuranWidget extends StatelessWidget {
           thickness: 2,),
         Row(
           children: [
-            const Expanded(child: Center(child: Text("اسم االسورة",style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),))),
+             Expanded(child: Center(child: Text("اسم االسورة",style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500,color: Theme.of(context).colorScheme.onPrimary),))),
             Container(color: Theme.of(context).colorScheme.tertiary,
               height: 50,
               width: 2,),
-            const Expanded(child: Center(child: Text("عدد الايات",style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500)))),
+             Expanded(child: Center(child: Text("عدد الايات",style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500,color: Theme.of(context).colorScheme.onPrimary)))),
           ],
         ),
         Divider(color: Theme.of(context).colorScheme.tertiary,
