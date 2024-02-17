@@ -15,7 +15,7 @@ class _SebihaWidgetState extends State<SebihaWidget> {
     tasbih();
     return Scaffold(
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+
         children: [
           Center(
             child: Stack(
@@ -64,9 +64,7 @@ class _SebihaWidgetState extends State<SebihaWidget> {
           ),
           const Spacer(flex: 1,),
           Container(
-            alignment: Alignment.center,
-            height: 51,
-            width: 137,
+           padding: EdgeInsets.symmetric(vertical: 8,horizontal: 20),
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.tertiary,
               borderRadius: BorderRadius.circular(30)
@@ -79,7 +77,7 @@ class _SebihaWidgetState extends State<SebihaWidget> {
     );
   }
   List<String> adkar =[
-    "الله أكـبر","الحمد للـه","سبحـان الله","استغفر الله","لا إله إلا الله"
+    "الله أكـبر","الحمد للـه","سبحـان الله","استغفر الله","لا حول ولا قوة إلا بالله"
   ];
   void tasbih(){
     deker = adkar[tsebihCounter];
