@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:islamy_app/screens/home/bodies/settings/theme_sheet.dart';
 import 'language_sheet.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class SettingsWidget extends StatefulWidget {
   const SettingsWidget({super.key});
@@ -17,7 +19,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Language", style: Theme.of(context).textTheme.titleMedium),
+          Text(AppLocalizations.of(context)!.language, style: Theme.of(context).textTheme.titleMedium),
           GestureDetector(
             onTap: (){
               showLanguageBottomSheet();
@@ -30,7 +32,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                 child: Text("English", style: Theme.of(context).textTheme.titleSmall?.copyWith(fontSize: 20))),
           ),
           SizedBox(height: 10),
-          Text("Theme", style: Theme.of(context).textTheme.titleMedium),
+          Text(AppLocalizations.of(context)!.theme, style: Theme.of(context).textTheme.titleMedium),
           GestureDetector(
               onTap: (){
                 showThemeBottomSheet();
