@@ -23,48 +23,43 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
         )),
         child:Scaffold(
           appBar: AppBar(
-            title: const Text("Islamy"),
+            title: Text("Islamy" ,style: Theme.of(context).textTheme.titleLarge)
           ),
           body: SingleChildScrollView(
-            child: Card(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Container(
-                    margin: const EdgeInsets.all(10),
-            
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("سورة ${args.title}", style: TextStyle(color: Theme.of(context).colorScheme.onSecondary, fontSize: 25 , fontWeight: FontWeight.bold)),
-                        const SizedBox(width: 10,),
-                        Icon(Icons.play_circle,color: Theme.of(context).colorScheme.onSecondary ,size: 25,)
-                      ],
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 15),
+              child: Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.all(10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("سورة ${args.title}", style: Theme.of(context).textTheme.titleSmall),
+                          const SizedBox(width: 10,),
+                          Icon(Icons.play_circle,color: Theme.of(context).colorScheme.onSecondary ,size: 25,)
+                        ],
+                      ),
                     ),
-                  ),
-                  Divider(
-                    color: Theme.of(context).colorScheme.tertiary,
-                    height: 1,
-                    thickness: 2,
-                    indent: 30,
-                    endIndent: 30,
-                  ),
-            
-                  lines.isNotEmpty ?Directionality(
-                    textDirection: TextDirection.rtl,
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Text(sura, style: TextStyle(color: Theme.of(context).colorScheme.onSecondary,fontSize: 20)),
+                    const Divider(height: 1, indent: 30, endIndent: 30),
+                    lines.isNotEmpty ?Directionality(
+                      textDirection: TextDirection.rtl,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Text(sura, style: Theme.of(context).textTheme.bodyMedium),
+                      ),
+                    ) : Container(
+                        width: double.infinity,
+                        height: 100,
+                        alignment: Alignment.center,
+                        child: CircularProgressIndicator(color: Theme.of(context).colorScheme.tertiary,)
                     ),
-                  ) : Container(
-                      width: double.infinity,
-                      height: 100,
-                      alignment: Alignment.center,
-                      child: CircularProgressIndicator(color: Theme.of(context).colorScheme.tertiary,)
-                  ),
-                            ],
-                          ),
-                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         )
     );

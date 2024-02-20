@@ -3,7 +3,7 @@ import 'package:islamy_app/screens/home/bodies/hadith/hadith_widget.dart';
 import 'package:islamy_app/screens/home/bodies/quran/quran_widget.dart';
 import 'package:islamy_app/screens/home/bodies/radio_widget.dart';
 import 'package:islamy_app/screens/home/bodies/sebiha/sebiha_widget.dart';
-import 'package:islamy_app/screens/home/bodies/settings_widget.dart';
+import 'package:islamy_app/screens/home/bodies/settings/settings_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "HomeScreen";
@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
       )),
       child: Scaffold(
         appBar: AppBar(
-          title: const Text("Islamy"),
+          title:  Text("Islamy" ,style: Theme.of(context).textTheme.titleLarge),
         ),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: currentNavIndex,
