@@ -1,39 +1,51 @@
 import 'package:flutter/material.dart';
 
 class LightTheme{
+  static  Color primaryColor = const Color(0xffB7935F);
+  static  Color onPrimaryColor = Colors.black;
+  static  Color secondaryColor = Colors.white;
+  static  Color onSecondaryColor =  Colors.black;
+  static  Color tertiaryColor = const Color(0xffB7935F);
   static ThemeData light =
   ThemeData(
-  scaffoldBackgroundColor : Colors.transparent,
-  appBarTheme: const AppBarTheme(
-  backgroundColor: Colors.transparent,
-  centerTitle: true,
-  titleTextStyle: TextStyle(color: Colors.black,fontSize: 30 ,fontWeight: FontWeight.bold),
-      shadowColor: Colors.transparent,
-      elevation: 0,
-      iconTheme: IconThemeData(color: Colors.black)
-  ),
-  cardTheme: const CardTheme(
-  color: Colors.white,
-  margin: EdgeInsets.all(20.0),
-  elevation: 10,
-  ),
-  colorScheme: ColorScheme.fromSeed(
-  seedColor: const Color(0xffB7935F),
-  primary: const Color(0xffB7935F),
-  onPrimary: Colors.black,
-  secondary: Colors.white,
-  onSecondary: Colors.black,
-  tertiary: const Color(0xffB7935F)
-  ),
-  bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-  selectedItemColor: Colors.black,
-  unselectedItemColor: Colors.white,
-  selectedIconTheme: IconThemeData(
-  size: 32
-  ),
-  unselectedIconTheme: IconThemeData(
-  size: 20)
-  ),
-  useMaterial3: true
+      scaffoldBackgroundColor: Colors.transparent,
+      appBarTheme:  AppBarTheme(
+          backgroundColor: Colors.transparent,
+          centerTitle: true,
+          titleTextStyle: TextStyle(color: onPrimaryColor,fontSize: 30 ,fontWeight: FontWeight.bold),
+          shadowColor: Colors.transparent,
+          elevation: 0,
+          iconTheme: IconThemeData(color: onPrimaryColor)),
+      dividerTheme: DividerThemeData(
+        color: tertiaryColor,
+        thickness: 2
+      ),
+      cardTheme: const CardTheme(
+        color: Colors.white,
+        margin: EdgeInsets.all(20.0),
+        elevation: 10,
+      ),
+      bottomSheetTheme: const BottomSheetThemeData(backgroundColor: Colors.white, elevation: 10),
+      textTheme: TextTheme(
+        titleLarge: TextStyle(fontSize: 30 ,fontWeight: FontWeight.bold ,color: onPrimaryColor),
+        titleMedium: TextStyle(fontSize:25 ,fontWeight: FontWeight.w600 ,color: onPrimaryColor),
+        titleSmall: TextStyle(fontSize:25 ,fontWeight: FontWeight.w600 ,color: onSecondaryColor),
+        bodyLarge: TextStyle(fontSize:23 ,fontWeight: FontWeight.w500 ,color: onPrimaryColor),
+        bodyMedium: TextStyle(fontSize:20 ,fontWeight: FontWeight.w400 ,color: onSecondaryColor)
+      ),
+      colorScheme: ColorScheme.fromSeed(
+          seedColor: primaryColor,
+          primary: primaryColor,
+          onPrimary: onPrimaryColor,
+          secondary: secondaryColor,
+          onSecondary: onSecondaryColor,
+          tertiary: tertiaryColor
+      ),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          selectedItemColor: onSecondaryColor,
+          unselectedItemColor: Colors.white,
+          selectedIconTheme: const IconThemeData(size: 32),
+          unselectedIconTheme: const IconThemeData(size: 20)),
+      useMaterial3: true
   );
 }

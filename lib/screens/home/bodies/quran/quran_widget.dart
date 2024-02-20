@@ -23,21 +23,18 @@ class QuranWidget extends StatelessWidget {
     return Column(
       children: [
         Center(child: Image.asset("assets/images/quran_image.png")),
-        Divider(color: Theme.of(context).colorScheme.tertiary,
-          height: 1,
-          thickness: 2,),
+        const Divider(height: 1),
         Row(
           children: [
-             Expanded(child: Center(child: Text("اسم االسورة",style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500,color: Theme.of(context).colorScheme.onPrimary),))),
+             Expanded(child: Center(child: Text("اسم االسورة",style: Theme.of(context).textTheme.titleMedium))),
             Container(color: Theme.of(context).colorScheme.tertiary,
               height: 50,
-              width: 2,),
-             Expanded(child: Center(child: Text("عدد الايات",style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500,color: Theme.of(context).colorScheme.onPrimary)))),
+              width: 2
+            ),
+            Expanded(child: Center(child: Text("عدد الايات",style: Theme.of(context).textTheme.titleMedium))),
           ],
         ),
-        Divider(color: Theme.of(context).colorScheme.tertiary,
-          height: 1,
-          thickness: 2,),
+        const Divider(height: 1),
         Expanded(
           flex: 3,
           child: ListView.custom(
