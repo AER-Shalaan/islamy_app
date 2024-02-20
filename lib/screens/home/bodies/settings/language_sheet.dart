@@ -27,13 +27,13 @@ class _LanguageSheetState extends State<LanguageSheet> {
     return  Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(language,style: TextStyle(color: Theme.of(context).colorScheme.tertiary,fontSize: 20,fontWeight: FontWeight.bold)),
+        Text(language,style: Theme.of(context).textTheme.bodySmall),
         Icon(Icons.check,color: Theme.of(context).colorScheme.tertiary ,)
       ],
     );
   }
 
   Widget getUnselectedItem(String language){
-    return Text(language ,style: TextStyle(color: Theme.of(context).colorScheme.onPrimary,fontSize: 18));
+    return Text(language ,style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 18));
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamy_app/screens/home/bodies/hadith/hadith_model.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HadithDetailsScreen extends StatelessWidget {
   static const String routeName = "HadithDetailsScreen";
@@ -16,7 +17,7 @@ class HadithDetailsScreen extends StatelessWidget {
             )),
         child:Scaffold(
           appBar: AppBar(
-            title: Text("Islamy" ,style: Theme.of(context).textTheme.titleLarge)
+            title: Text(AppLocalizations.of(context)!.islami,style: Theme.of(context).textTheme.titleLarge)
           ),
           body: SingleChildScrollView(
             child: Padding(

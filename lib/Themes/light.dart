@@ -31,7 +31,8 @@ class LightTheme{
         titleMedium: TextStyle(fontSize:25 ,fontWeight: FontWeight.w600 ,color: onPrimaryColor),
         titleSmall: TextStyle(fontSize:25 ,fontWeight: FontWeight.w600 ,color: onSecondaryColor),
         bodyLarge: TextStyle(fontSize:23 ,fontWeight: FontWeight.w500 ,color: onPrimaryColor),
-        bodyMedium: TextStyle(fontSize:20 ,fontWeight: FontWeight.w400 ,color: onSecondaryColor)
+        bodyMedium: TextStyle(fontSize:20 ,fontWeight: FontWeight.w400 ,color: onSecondaryColor),
+        bodySmall: TextStyle(fontSize:20 ,fontWeight: FontWeight.bold ,color: tertiaryColor)
       ),
       colorScheme: ColorScheme.fromSeed(
           seedColor: primaryColor,

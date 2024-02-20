@@ -27,13 +27,13 @@ class _ThemeSheetState extends State<ThemeSheet> {
     return  Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(selectedTheme,style: TextStyle(color: Theme.of(context).colorScheme.tertiary,fontSize: 20,fontWeight: FontWeight.bold)),
+        Text(selectedTheme,style: Theme.of(context).textTheme.bodySmall),
         Icon(Icons.check,color: Theme.of(context).colorScheme.tertiary ,)
       ],
     );
   }
 
   Widget getUnselectedItem(String unselectedTheme){
-    return Text(unselectedTheme ,style: TextStyle(color: Theme.of(context).colorScheme.onPrimary,fontSize: 18));
+    return Text(unselectedTheme ,style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 18));
   }
 }
