@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islamy_app/providers/settings_provider.dart';
+import 'package:provider/provider.dart';
 
 class QuranDetailsScreen extends StatefulWidget {
   static const String routeName = "QuranDetailsScreen";
@@ -13,13 +15,14 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     QuranDetailsArgs args = ModalRoute.of(context)?.settings.arguments as QuranDetailsArgs;
+    SettingsProvider provider = Provider.of<SettingsProvider>(context);
     if(lines.isEmpty){
       readQuranFile(args.index);
     }
     return Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
         image: DecorationImage(
-        image: AssetImage("assets/images/background.png"),
+        image: AssetImage((provider.theme == ThemeMode.dark?"assets/images/dark_background.png":"assets/images/background.png")),
             fit: BoxFit.fill
         )),
         child:Scaffold(

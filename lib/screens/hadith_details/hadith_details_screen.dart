@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:islamy_app/providers/settings_provider.dart';
 import 'package:islamy_app/screens/home/bodies/hadith/hadith_model.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 
 class HadithDetailsScreen extends StatelessWidget {
   static const String routeName = "HadithDetailsScreen";
@@ -9,10 +11,11 @@ class HadithDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     HadithModel hadithModel = ModalRoute.of(context)?.settings.arguments as HadithModel;
+    SettingsProvider provider = Provider.of<SettingsProvider>(context);
     return  Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/images/background.png"),
+                image: AssetImage((provider.theme == ThemeMode.dark?"assets/images/dark_background.png":"assets/images/background.png")),
                 fit: BoxFit.fill
             )),
         child:Scaffold(

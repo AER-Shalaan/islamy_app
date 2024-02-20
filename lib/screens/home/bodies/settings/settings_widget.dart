@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:islamy_app/providers/settings_provider.dart';
 import 'package:islamy_app/screens/home/bodies/settings/theme_sheet.dart';
+import 'package:provider/provider.dart';
 import 'language_sheet.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -14,6 +16,7 @@ class SettingsWidget extends StatefulWidget {
 class _SettingsWidgetState extends State<SettingsWidget> {
   @override
   Widget build(BuildContext context) {
+    SettingsProvider provider = Provider.of<SettingsProvider>(context);
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: Column(
@@ -42,7 +45,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                 alignment: Alignment.center,
                 margin: EdgeInsets.all(10),
                 decoration: BoxDecoration(border: Border.all(color: Theme.of(context).colorScheme.tertiary),borderRadius: BorderRadius.circular(15),color: Theme.of(context).colorScheme.primary.withOpacity(0.50)),
-                child: Text("English", style: Theme.of(context).textTheme.titleSmall?.copyWith(fontSize: 20))
+                child: Text(provider.theme == ThemeMode.dark?"Dark":"Light", style: Theme.of(context).textTheme.titleSmall?.copyWith(fontSize: 20))
             ),
           ),
 
