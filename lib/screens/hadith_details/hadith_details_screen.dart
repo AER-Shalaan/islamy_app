@@ -16,44 +16,41 @@ class HadithDetailsScreen extends StatelessWidget {
             )),
         child:Scaffold(
           appBar: AppBar(
-            title: const Text("Islamy"),
+            title: Text("Islamy" ,style: Theme.of(context).textTheme.titleLarge)
           ),
           body: SingleChildScrollView(
-            child: Card(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(hadithModel.title, style: TextStyle(color: Theme.of(context).colorScheme.onSecondary, fontSize: 25 , fontWeight: FontWeight.bold)),
-                        const SizedBox(width: 10,),
-                        Icon(Icons.play_circle,color: Theme.of(context).colorScheme.onSecondary ,size: 25,),
-                        const SizedBox(height: 10,),
-                      ],
-                    ),
-                  ),
-                  Divider(
-                    color: Theme.of(context).colorScheme.tertiary,
-                    height: 1,
-                    thickness: 2,
-                    indent: 30,
-                    endIndent: 30,
-                  ),
-                  Directionality(
-                    textDirection: TextDirection.rtl,
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Text(hadithModel.content,
-                          style: TextStyle(color: Theme.of(context).colorScheme.onSecondary,fontSize: 20)
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 10.0),
+              child: Card(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.all(10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(hadithModel.title, style: Theme.of(context).textTheme.titleSmall),
+                          const SizedBox(width: 10,),
+                          Icon(Icons.play_circle,color: Theme.of(context).colorScheme.onSecondary ,size: 25,),
+                          const SizedBox(height: 10,),
+                        ],
                       ),
                     ),
-                  )
+                    const Divider(height: 1, indent: 30, endIndent: 30,),
+                    Directionality(
+                      textDirection: TextDirection.rtl,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Text(hadithModel.content,
+                            style: Theme.of(context).textTheme.bodyMedium
+                        ),
+                      ),
+                    )
 
 
-                ],
+                  ],
+                ),
               ),
             ),
           ),

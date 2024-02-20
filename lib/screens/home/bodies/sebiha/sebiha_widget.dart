@@ -50,7 +50,7 @@ class _SebihaWidgetState extends State<SebihaWidget> {
                 ],),
           ),
           const Spacer(flex: 1,),
-          Text("عدد التسبيحات", style: TextStyle(color: Theme.of(context).colorScheme.onPrimary,fontWeight: FontWeight.w500,fontSize: 25),),
+          Text("عدد التسبيحات", style: Theme.of(context).textTheme.bodyLarge),
           const Spacer(flex: 1,),
           Container(
             alignment: Alignment.center,
@@ -60,7 +60,7 @@ class _SebihaWidgetState extends State<SebihaWidget> {
               color: Theme.of(context).colorScheme.primary.withOpacity(0.5),
               borderRadius: BorderRadius.circular(25)
             ),
-            child: Text("$sebihaCounter",style: TextStyle(color: Theme.of(context).colorScheme.onPrimary,fontSize: 25,fontWeight: FontWeight.bold),),
+            child: Text("$sebihaCounter",style: Theme.of(context).textTheme.bodyLarge),
           ),
           const Spacer(flex: 1,),
           Container(
@@ -69,7 +69,7 @@ class _SebihaWidgetState extends State<SebihaWidget> {
               color: Theme.of(context).colorScheme.tertiary,
               borderRadius: BorderRadius.circular(30)
             ),
-            child: Text(deker,style: TextStyle(color: Theme.of(context).colorScheme.secondary,fontSize: 25,fontWeight: FontWeight.bold),),
+            child: Text(deker,style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Theme.of(context).colorScheme.secondary)),
           ),
           const Spacer(flex: 6)
 

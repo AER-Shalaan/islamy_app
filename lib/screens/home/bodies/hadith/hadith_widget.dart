@@ -17,19 +17,14 @@ class _HadithWidgetState extends State<HadithWidget> {
       loadAhadethFile();
     }
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Expanded(
           flex: 1,
             child: Image.asset("assets/images/ahadeth_image.png")),
-        Container(
-          width: double.infinity,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-              border: Border.symmetric(
-                  horizontal: BorderSide(color: Theme.of(context).colorScheme.tertiary,width: 2)
-              )),
-            child: Text("الأحاديث",style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500,color: Theme.of(context).colorScheme.onPrimary))
-        ),
+        const Divider(height: 1),
+        Text("الأحاديث", style: Theme.of(context).textTheme.titleMedium),
+        const Divider(height: 1),
         Expanded(
           flex: 3,
             child: ahadeth.isNotEmpty?
