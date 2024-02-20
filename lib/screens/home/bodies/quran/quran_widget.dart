@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamy_app/screens/home/bodies/quran/quran_title_widget.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class QuranWidget extends StatelessWidget {
   List<String> suraNames = [
     "الفاتحه","البقرة","آل عمران","النساء","المائدة","الأنعام","الأعراف","الأنفال","التوبة","يونس","هود"
@@ -26,12 +26,12 @@ class QuranWidget extends StatelessWidget {
         const Divider(height: 1),
         Row(
           children: [
-             Expanded(child: Center(child: Text("اسم االسورة",style: Theme.of(context).textTheme.titleMedium))),
+             Expanded(child: Center(child: Text(AppLocalizations.of(context)!.sura_name,style: Theme.of(context).textTheme.titleMedium))),
             Container(color: Theme.of(context).colorScheme.tertiary,
               height: 50,
               width: 2
             ),
-            Expanded(child: Center(child: Text("عدد الايات",style: Theme.of(context).textTheme.titleMedium))),
+            Expanded(child: Center(child: Text(AppLocalizations.of(context)!.verses_number,style: Theme.of(context).textTheme.titleMedium))),
           ],
         ),
         const Divider(height: 1),

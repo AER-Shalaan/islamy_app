@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class QuranDetailsScreen extends StatefulWidget {
   static const String routeName = "QuranDetailsScreen";
@@ -23,7 +24,7 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
         )),
         child:Scaffold(
           appBar: AppBar(
-            title: Text("Islamy" ,style: Theme.of(context).textTheme.titleLarge)
+            title: Text(AppLocalizations.of(context)!.islami ,style: Theme.of(context).textTheme.titleLarge)
           ),
           body: SingleChildScrollView(
             child: Padding(
