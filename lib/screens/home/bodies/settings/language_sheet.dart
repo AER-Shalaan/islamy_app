@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:islamy_app/providers/settings_provider.dart';
+import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LanguageSheet extends StatefulWidget {
   const LanguageSheet({super.key});
@@ -10,14 +13,20 @@ class LanguageSheet extends StatefulWidget {
 class _LanguageSheetState extends State<LanguageSheet> {
   @override
   Widget build(BuildContext context) {
+    SettingsProvider provider = Provider.of<SettingsProvider>(context);
     return Padding(
       padding: const EdgeInsets.all(18.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          getSelectedItem("English"),
-          SizedBox(height: 15),
-          getUnselectedItem("العربية")
+          getSelectedItem(provider.language == "ar"?AppLocalizations.of(context)!.arabic:AppLocalizations.of(context)!.english),
+          const SizedBox(height: 15),
+          InkWell(
+               onTap: (){
+                 Navigator.pop(context);
+                 provider.changeLanguage(provider.language == "ar"?"en":"ar");
+               },
+              child: getUnselectedItem(provider.language == "ar"?AppLocalizations.of(context)!.english:AppLocalizations.of(context)!.arabic))
         ],
       ),
     );
