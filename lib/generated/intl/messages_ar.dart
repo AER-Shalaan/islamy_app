@@ -23,14 +23,18 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "ahadeth": MessageLookupByLibrary.simpleMessage("أحاديث"),
+        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "dark": MessageLookupByLibrary.simpleMessage("مظلم"),
+        "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "islami": MessageLookupByLibrary.simpleMessage("أسلامي"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
+        "light": MessageLookupByLibrary.simpleMessage("مضئ"),
         "quran": MessageLookupByLibrary.simpleMessage("قرأن"),
         "radio": MessageLookupByLibrary.simpleMessage("راديو"),
         "sebiha": MessageLookupByLibrary.simpleMessage("سبحة"),
         "settings": MessageLookupByLibrary.simpleMessage("إعدادات"),
         "sura_name": MessageLookupByLibrary.simpleMessage("اسم السورة"),
-        "theme": MessageLookupByLibrary.simpleMessage("المظهر"),
+        "theme": MessageLookupByLibrary.simpleMessage("السمة"),
         "verses_number": MessageLookupByLibrary.simpleMessage("عدد الآيات")
       };
 }

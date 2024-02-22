@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         Locale('en'), // English
         Locale('ar'), // Arabic
       ],
-      locale: const Locale("ar"),
+      locale: Locale(provider.language),
 
       theme: LightTheme.light,
       darkTheme: DarkTheme.dark,

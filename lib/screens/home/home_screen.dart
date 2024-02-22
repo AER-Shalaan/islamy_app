@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:islamy_app/generated/l10n.dart';
 import 'package:islamy_app/providers/settings_provider.dart';
 import 'package:islamy_app/screens/home/bodies/hadith/hadith_widget.dart';
 import 'package:islamy_app/screens/home/bodies/quran/quran_widget.dart';

@@ -6,7 +6,11 @@
   "sebiha" : "سبحة",
   "radio" : "راديو",
   "language" : "اللغة",
-  "theme" : "المظهر",
+  "theme" : "السمة",
   "sura_name" : "اسم السورة",
-  "verses_number" : "عدد الآيات"
+  "verses_number" : "عدد الآيات",
+  "dark": "مظلم",
+  "light": "مضئ",
+  "english": "الإنجليزية",
+  "arabic": "العربية"
 }

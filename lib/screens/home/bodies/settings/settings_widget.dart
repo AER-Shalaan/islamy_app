@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 import 'language_sheet.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-
 class SettingsWidget extends StatefulWidget {
   const SettingsWidget({super.key});
 
@@ -30,11 +29,11 @@ class _SettingsWidgetState extends State<SettingsWidget> {
             child: Container(
                 height: 50,
                 alignment: Alignment.center,
-                margin: EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(border: Border.all(color: Theme.of(context).colorScheme.tertiary),borderRadius: BorderRadius.circular(15),color: Theme.of(context).colorScheme.primary.withOpacity(0.50)),
-                child: Text("English", style: Theme.of(context).textTheme.titleSmall?.copyWith(fontSize: 20))),
+                child: Text(provider.language=="ar"?AppLocalizations.of(context)!.arabic:AppLocalizations.of(context)!.english, style: Theme.of(context).textTheme.titleSmall?.copyWith(fontSize: 20))),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(AppLocalizations.of(context)!.theme, style: Theme.of(context).textTheme.titleMedium),
           GestureDetector(
               onTap: (){
@@ -43,9 +42,9 @@ class _SettingsWidgetState extends State<SettingsWidget> {
             child: Container(
                 height: 50,
                 alignment: Alignment.center,
-                margin: EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(border: Border.all(color: Theme.of(context).colorScheme.tertiary),borderRadius: BorderRadius.circular(15),color: Theme.of(context).colorScheme.primary.withOpacity(0.50)),
-                child: Text(provider.theme == ThemeMode.dark?"Dark":"Light", style: Theme.of(context).textTheme.titleSmall?.copyWith(fontSize: 20))
+                child: Text(provider.theme == ThemeMode.dark?AppLocalizations.of(context)!.dark:AppLocalizations.of(context)!.light, style: Theme.of(context).textTheme.titleSmall?.copyWith(fontSize: 20))
             ),
           ),
 
@@ -56,13 +55,13 @@ class _SettingsWidgetState extends State<SettingsWidget> {
 
   void showLanguageBottomSheet(){
     showModalBottomSheet(context: context, builder: (context){
-      return LanguageSheet();
+      return const LanguageSheet();
     });
   }
 
   void showThemeBottomSheet(){
     showModalBottomSheet(context: context, builder: (context){
-      return ThemeSheet();
+      return const ThemeSheet();
     });
   }
 }
