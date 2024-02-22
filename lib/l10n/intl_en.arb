@@ -8,5 +8,9 @@
   "language" : "Language",
   "theme" : "Theme",
   "sura_name" : "Sura name",
-  "verses_number" : "Verses number"
+  "verses_number" : "Verses number",
+  "dark": "Dark",
+  "light": "Light",
+  "english": "English",
+  "arabic": "Arabic"
 }
