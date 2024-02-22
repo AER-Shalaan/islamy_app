@@ -10,8 +10,9 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(
-      create: (context) => SettingsProvider(),
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(ChangeNotifierProvider<SettingsProvider>(
+      create: (_) => SettingsProvider()..initialize(),
       child: const MyApp()));
 }
 
